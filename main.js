@@ -1,9 +1,9 @@
 import { convertToMorse, convertToText } from "./morse.js";
 
-const textInput = document.querySelector(".text-input");
-const textSubmit = document.querySelector(".text-input__submit");
-const morseInput = document.querySelector(".morse-input");
-const morseSubmit = document.querySelector(".morse-input__submit");
+const textInput = document.querySelector(".text__input");
+const textSubmit = document.querySelector(".text__submit");
+const morseInput = document.querySelector(".morse__input");
+const morseSubmit = document.querySelector(".morse__submit");
 
 const displayMorse = () => {
   morseInput.value = convertToMorse(textInput.value);

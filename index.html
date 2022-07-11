@@ -6,24 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" type="module" async defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Morse Code Translator</title>
 </head>
 
 <body>
     <header>
-        <h1>Mose Code Translator</h1>
+        <h1 class="heading">Mose Code Translator</h1>
 
     </header>
     <main>
-        <div>
-            <label for="text-input">Text to Translate:</label>
-            <input type="text" name="text-input" class="text-input">
-            <button class="text-input__submit">Convert to Morse</button>
+        <div class="text input-container">
+            <label class="input-label" for="text-input">Text to Translate:</label>
+            <input type="text" name="text-input" class="text__input input">
+            <button class="text__submit button">Convert to Morse</button>
         </div>
-        <div>
-            <label for="morse-input">Morse to Translate:</label>
-            <input type="text" name="morse-input" class="morse-input">
-            <button class="morse-input__submit">Convert to Text</button>
+        <div class="morse input-container">
+            <label class="input-label" for="morse-input">Morse to Translate:</label>
+            <input type="text" name="morse-input" class="morse__input input">
+            <button class="morse__submit button">Convert to Text</button>
         </div>
     </main>
 </body>
