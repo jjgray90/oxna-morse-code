@@ -1,11 +1,17 @@
-import { convertToMorse } from "./morse.js";
+import { convertToMorse, convertToText } from "./morse.js";
 
 const textInput = document.querySelector(".text-input");
-const submitButton = document.querySelector(".text-input__submit");
-const morseOutput = document.querySelector(".morse-output");
+const textSubmit = document.querySelector(".text-input__submit");
+const morseInput = document.querySelector(".morse-input");
+const morseSubmit = document.querySelector(".morse-input__submit");
 
 const displayMorse = () => {
-  morseOutput.innerHTML = convertToMorse(textInput.value);
+  morseInput.value = convertToMorse(textInput.value);
 };
 
-submitButton.addEventListener("click", displayMorse);
+const displayText = () => {
+  textInput.value = convertToText(morseInput.value);
+};
+
+textSubmit.addEventListener("click", displayMorse);
+morseSubmit.addEventListener("click", displayText);
