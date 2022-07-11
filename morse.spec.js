@@ -1,5 +1,10 @@
 import { expect, it } from "@jest/globals";
-import { getText, getArrayFromText, getMorseFromArray } from "./morse";
+import {
+  getText,
+  getArrayFromText,
+  getMorseFromArray,
+  convertToMorse,
+} from "./morse";
 
 it("should accept text string on input", () => {
   const result = getText("hello");
@@ -24,4 +29,9 @@ it("should convert array to morse", () => {
 it("should convert spaces to /", () => {
   const result = getMorseFromArray([" "]);
   expect(result).toBe("/");
+});
+
+it("should receive a string of text and return a string of morse", () => {
+  const result = convertToMorse("hello");
+  expect(result).toBe("....   .   .-..   .-..   ---");
 });

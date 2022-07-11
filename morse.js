@@ -50,9 +50,9 @@ export const getMorseFromArray = (textArray) => {
   return morseArray.join("   ");
 };
 
-export const runAllfunctions = (string) => {
+export const convertToMorse = (string) => {
   const lowerText = getText(string);
   const textArray = getArrayFromText(lowerText);
   const morseCode = getMorseFromArray(textArray);
-  console.log(morseCode);
+  return morseCode;
 };
